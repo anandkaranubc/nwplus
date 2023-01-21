@@ -1,3 +1,5 @@
 print("Hello World")
 print("Fakhir")
 print("Reza")
+print("Karan")
+print("Safiullah")
