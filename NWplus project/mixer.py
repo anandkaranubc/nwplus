@@ -1,4 +1,6 @@
 import speech_recognition as sr
+import os
+from gtts import gTTS
 
 r = sr.Recognizer()
 
@@ -8,11 +10,8 @@ with sr.Microphone() as source:
 
 
 text = r.recognize_google(audio, show_all=True)
+most_likely_text = text["alternative"][0]["transcript"]
 
-from gtts import gTTS
-
-# Create an instance of the gTTS class
-tts = gTTS(text, lang='en', slow=False)
-
-# Save the audio to a file
+tts = gTTS(most_likely_text, lang='en', slow=False)
 tts.save("output.mp3")
+os.system("afplay output.mp3")

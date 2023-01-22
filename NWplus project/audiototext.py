@@ -9,6 +9,6 @@ with sr.Microphone() as source:
 
 text = r.recognize_google(audio, show_all=True)
 
-print(text)
+print(text["alternative"][0]["transcript"])
 
 
