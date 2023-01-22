@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import os
 from gtts import gTTS
+
 # defines start_mixer
 def start_mixer():  
     # sets variable r as recognizer which uses microphone to listen through listen function

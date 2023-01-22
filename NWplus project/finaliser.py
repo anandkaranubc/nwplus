@@ -33,4 +33,3 @@ else:
 
 print(f'Polarity: {polarity}')
 print(f'Subjectivity: {blob.sentiment.subjectivity}')
-
