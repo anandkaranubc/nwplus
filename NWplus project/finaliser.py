@@ -3,7 +3,7 @@ import os
 from gtts import gTTS
 from textblob import TextBlob
 
-
+#
 r = sr.Recognizer()
 
 
@@ -12,18 +12,16 @@ with sr.Microphone() as source:
     audio = r.listen(source)
 
 
-
+#transcribe audio input to selected language (default : English)
 text = r.recognize_google(audio)
 
-
-#tts = gTTS(most_likely_text, lang='en', slow=False)
-#tts.save("output.mp3")
-#os.system("afplay output.mp3")
-
+#sentiment analysis
 blob = TextBlob(text)
 
+#determines polarity of transcribed statements
 polarity = blob.sentiment.polarity
 
+#assigns descriptive value depending on polarity sign
 if polarity > 0:
     print("Positive")
 elif polarity == 0:

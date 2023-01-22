@@ -2,7 +2,7 @@ import speech_recognition as sr
 
 # defines start recording
 def start_recording():
-# sets variable r as recognizer which uses microphone to listen through listen function
+# sets variable r as the recognizer which uses microphone to listen through listen function
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
