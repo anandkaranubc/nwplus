@@ -9,4 +9,4 @@ tts = gTTS(text, lang='en', slow=False)
 
 # Save the audio to a file
 tts.save("output.mp3")
-os.system("afplay output.mp3")
+os.system("output.mp3")
